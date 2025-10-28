@@ -20,7 +20,7 @@ const Navbar = () => {
       </div>
       <div className='menu-area'>
         <ul className='menu-list'>
-            {menuList.map((item) =>(<li>{item}</li>))}
+            {menuList.map((item, index) =>(<li variant="outline-dark" key={index}>{item}</li>))}
         </ul>
         <div className='menu-search'>
             <FontAwesomeIcon icon={faSearch}/>
