@@ -41,3 +41,14 @@
     font-size: 14px;
     margin-left: 10px;
 }
+
+.product-card{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: none;
+    padding: 20px;
+}
+
+.product-card:hover{
+    transform: scale(1.05);
+}
