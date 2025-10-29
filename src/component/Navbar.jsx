@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 const Navbar = () => {
 
@@ -21,7 +21,9 @@ const Navbar = () => {
         </div>
       </div>
       <div className='nav-section'>
-        <img width={140} src='https://upload.wikimedia.org/wikipedia/commons/5/53/H%26M-Logo.svg'></img>
+        <Link to="/">
+          <img width={140} src='https://upload.wikimedia.org/wikipedia/commons/5/53/H%26M-Logo.svg'></img>
+        </Link>
       </div>
       <div className='menu-area'>
         <ul className='menu-list'>
