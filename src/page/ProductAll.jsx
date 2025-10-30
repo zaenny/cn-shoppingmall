@@ -11,7 +11,7 @@ const ProductAll = () => {
   const getProducts = async() => {
 
     let searchQuery = query.get('q') || "";
-    let url = `https://my-json-server.typicode.com/products`;
+    let url = `https://my-json-server.typicode.com/zaenny/cn-shoppingmall/products`;
     
     if(searchQuery){
       url += `?q=${searchQuery}`
