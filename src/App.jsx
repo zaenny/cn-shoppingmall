@@ -21,7 +21,7 @@ import PrivateRoute from "./route/PrivateRoute";
 // 상품을 검색 할 수있다. 
 
 function App() {
-  const [authenticate, setAuthenticate] = useState(false);
+  const [authenticate, setAuthenticate] = useState(true);
 
   useEffect((
 

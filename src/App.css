@@ -53,3 +53,16 @@
 .product-card:hover{
     transform: scale(1.05);
 }
+
+.product-img{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product-info{
+    padding: 20px;
+}
+
+.product-info > * {
+    margin-bottom: 10px;
+}
