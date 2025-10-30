@@ -66,3 +66,58 @@
 .product-info > * {
     margin-bottom: 10px;
 }
+
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  /* 사이드바 메뉴 스타일 */
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-menu li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+  
+  .sidebar-menu li:hover {
+    font-weight: bold;
+  }
+  
+  /* 모바일 (768px 이하) */
+  @media (max-width: 768px) {
+    
+    .hamburger-menu {
+      display: block;
+    }
+    
+    /* 데스크톱 */
+    .menu-area {
+      display: none !important;
+    }
+    
+    .login-button {
+      margin: 10px;
+    }
+    
+    .nav-section img {
+      width: 100px;
+    }
+
+    .product-img img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+        
+    .product-info {
+      padding: 20px;
+    }
+  }

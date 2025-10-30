@@ -9,8 +9,8 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   
   const getProductDetail = async() => {
-    //let url = ` https://my-json-server.typicode.com/product/${id}`
-    let url = ` http://localhost:4000/products/${id}`
+    let url = `https://my-json-server.typicode.com/product/${id}`
+    //let url = `http://localhost:4000/products/${id}`
     let response = await fetch(url);
     let data = await response.json();
 
@@ -33,14 +33,14 @@ const ProductDetail = () => {
           <div>{product?.choice == true ? "Conscious Choice" : ""}</div>
           <div>{product?.new == true ? "신제품" : ""}</div>
           <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-              SIZE
+            <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
+              사이즈 선택
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">S</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">M</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">L</Dropdown.Item>
+              {product && product.size.map((item)=>(
+                <Dropdown.Item >{item}</Dropdown.Item>
+              ))}
             </Dropdown.Menu>
           </Dropdown>
           <Button className='w-100' variant="dark">추가</Button>
