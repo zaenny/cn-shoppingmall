@@ -47,18 +47,21 @@ const Navbar = ({authenticate,setAuthenticate}) => {
         </Link>
       </div>
 
-      <div className='hamburger-menu' onClick={handleShow}>
-        <FontAwesomeIcon icon={faBars} />
-      </div>
-
       <div className='menu-area'>
+        
+        <div className='hamburger-menu' onClick={handleShow}>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
+
         <ul className='menu-list'>
             {menuList.map((item, index) =>(<li variant="outline-dark" key={index}>{item}</li>))}
         </ul>
+
         <div className='menu-search'>
             <FontAwesomeIcon icon={faSearch}/>
             <input type='text' onKeyPress={(event)=>search(event)}/>
         </div>
+        
       </div>
 
       <Offcanvas show={show} onHide={handleClose} placement="start">

@@ -9,7 +9,6 @@
 .nav-section{
     display: flex;
     justify-content: center;
-    padding: 20px;
 }
 
 .menu-area{
@@ -31,6 +30,15 @@
 
 .menu-list li:hover{
     border-bottom: 2px solid #000;
+}
+
+
+.menu-search{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    right: 20px;
 }
 
 .menu-search input{
@@ -71,16 +79,14 @@
     display: none;
     font-size: 24px;
     cursor: pointer;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
+    margin-right: auto;
+    padding-left: 20px;
+}
   
-  /* 사이드바 메뉴 스타일 */
-  .sidebar-menu {
+.sidebar-menu {
     list-style: none;
     padding: 0;
-  }
+}
   
   .sidebar-menu li {
     padding: 15px 0;
@@ -99,10 +105,23 @@
       display: block;
     }
     
-    /* 데스크톱 */
-    .menu-area {
-      display: none !important;
-    }
+    .menu-list {
+        display: none !important;
+      }
+      
+      /* 검색창은 그대로 오른쪽에 */
+      .menu-search {
+        position: absolute;
+        right: 20px;
+      }
+      
+      .menu-search input {
+        width: 100px;
+      }
+      
+      .nav-section img {
+        width: 100px;
+      }
     
     .login-button {
       margin: 10px;
@@ -112,12 +131,18 @@
       width: 100px;
     }
 
-    .product-img img {
-      width: 100%;
-      margin-bottom: 20px;
+    .product-img {
+        padding: 0 !important;
+        margin-bottom: 20px;
     }
-        
+    
+    .product-img img{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
     .product-info {
-      padding: 20px;
+        padding: 0 15px;
     }
   }

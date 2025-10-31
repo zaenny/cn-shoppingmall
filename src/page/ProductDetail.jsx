@@ -24,10 +24,10 @@ const ProductDetail = () => {
   return (
     <Container>
       <Row>
-        <Col className='product-img'>
+        <Col xs={12} lg={6} className='product-img'>
           <img src={product?.img} />
         </Col>
-        <Col className='product-info'>
+        <Col xs={12} lg={6} className='product-info'>
           <div>{product?.title}</div>
           <div>{product?.price} 원</div>
           <div>{product?.choice == true ? "Conscious Choice" : ""}</div>
