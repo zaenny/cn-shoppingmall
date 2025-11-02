@@ -7,6 +7,7 @@ const ProductDetail = () => {
 
   let { id } = useParams();
   const [product, setProduct] = useState(null);
+  const [selectedSize, setSelectedSize] = useState("사이즈 선택");
   
   const getProductDetail = async() => {
     let url = `https://my-json-server.typicode.com/zaenny/cn-shoppingmall/products/${id}`
@@ -33,13 +34,18 @@ const ProductDetail = () => {
           <div>{product?.choice == true ? "Conscious Choice" : ""}</div>
           <div>{product?.new == true ? "신제품" : ""}</div>
           <Dropdown>
-            <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
-              사이즈 선택
+          <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
+              {selectedSize} {/* 선택된 사이즈 표시 */}
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              {product && product.size.map((item)=>(
-                <Dropdown.Item >{item}</Dropdown.Item>
+              {product && product.size.map((item, index)=>(
+                <Dropdown.Item 
+                  key={index}
+                  onClick={() => setSelectedSize(item)} // 클릭 시 사이즈 저장
+                >
+                  {item}
+                </Dropdown.Item>
               ))}
             </Dropdown.Menu>
           </Dropdown>
